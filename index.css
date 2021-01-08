@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;400;500;700;900&display=swap');
+:root{
+    --font-color:#332D31;
+}
+
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+body{
+    background: url("/IMG/adrien-converse-FWhTeWRCeis-unsplash.jpg"), no-repeat, center;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    height:100vh;
+    width:100vw;
+    display:grid;
+    place-content: center;
+}
+
+.container{
+    position:relative;
+    width:70vw;
+    height:70vh;
+    border-radius: 0 20px;
+    box-shadow:0 0 1rem 0 rgba(0, 0, 0, 0.2), 0 0 1rem 0  rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    background:inherit;
+    z-index:3;
+    display:grid;
+    grid-template-columns:1fr 2fr;
+    color:var(--font-color);
+}
+.container::before{
+    position:absolute;
+    content:"";
+    box-shadow: inset 0 0 0 70vh rgba(255,255,255,0.1);
+    left:0;
+    top:0;
+    bottom:0;
+    right:0;
+    filter: blur(10px);
+    margin:-20px;
+    z-index:-1;
+    background:inherit;
+
+}
+.container__nav{
+    background-color:rgba(255, 255, 255, 0.3);
+    padding:10px;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+}
+.nav__img{
+    width:80px;
+    height:80px;
+    object-fit: cover;
+    object-position: center;
+    border-radius:50%;
+    display:block;
+}
+.nav__user-data{
+    margin-top:10px;
+    font-weight:bold;
+}
+.username{
+    font-weight:300;
+    font-size:.8em;
+    text-align:center;
+}
+.nav__social{
+    margin-top:30px;
+    list-style-type: none;
+}
+.social__item{
+    margin:10px 0;
+}
+.social__item:hover{
+    background-color:rgba(255, 255, 255, 0.3);
+}
+.social__item i{
+    font-size:1.3em;
+    margin-right:5px;
+}
+.nav__advert{
+    height:100px;
+    width:80%;
+    margin-top:40px;
+    border-radius: 0 10px;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+.container__detail{
+    padding:10px;
+}
+.detail__header{
+    font-weight:900;
+    font-size:1.5em;
+    text-align:left;
+}
+.messages{
+    list-style-type: none;
+    display:flex;
+    flex-direction:column;
+    margin-top:30px;
+
+}
+.message{
+    position: relative;
+    display:flex;
+    margin:10px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius:10px;
+    padding:5px;
+    gap:10px;
+    width:max-content;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+
+
+}
+.message--right{
+    align-self: flex-end;
+}
+
+.message--left{
+    align-self: flex-start;
+
+}
+.message img{
+    height:40px;
+    width:40px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.message p{
+    font-size:.8em;
+}
+.message h6{
+    font-size:.8em;
+}
+.message span{
+    display:inline-block;
+    font-size: .7em;
+}
+form{
+    width:100%;
+    display: flex;
+}
+input{
+    width:100%;
+    height:1.4rem;
+    border-radius:4px 0 0 4px;
+    border:none;
+    background-color: transparent;
+    background-color: rgba(255, 255, 255, 0.3);
+    padding-left:4px;
+    font-size:.8em;
+
+
+}
+button{
+    width: 30px;
+    border-radius: 0 3px 3px 0;
+    border:none;
+    background-color: rgba(255, 255, 255, 0.5);
+
+}
